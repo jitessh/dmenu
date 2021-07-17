@@ -3,7 +3,7 @@
 dmenu \- dynamic menu
 .SH SYNOPSIS
 .B dmenu
-.RB [ \-bcfFiv ]
+.RB [ \-bcfFiPv ]
 .RB [ \-bw
 .IR border ]
 .RB [ \-g
@@ -85,6 +85,9 @@ from 0.
 .TP
 .BI \-p " prompt"
 defines the prompt to be displayed to the left of the input field.
+.TP
+.B \-P
+dmenu will not directly display the keyboard input, but instead replace it with dots. All data from stdin will be ignored.
 .TP
 .BI \-fn " font"
 defines the font or font set used.
