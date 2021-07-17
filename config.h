@@ -1,18 +1,41 @@
 /* See LICENSE file for copyright and license details. */
 /* Default settings; can be overriden by command line. */
 
-static const char *colors[SchemeLast][2] = {
-	/*                          fg         bg       */
-	[SchemeNorm]            = { "#bbbbbb", "#222222" },
-	[SchemeSel]             = { "#eeeeee", "#005577" },
-	[SchemeOut]             = { "#000000", "#00ffff" },
-	[SchemeSelHighlight]    = { "#ffc978", "#005577" },
-	[SchemeNormHighlight]   = { "#ffc978", "#222222" },
+/* colorscheme */
+static char norm_fg[]               = "#ebdbb2";
+static char norm_bg[]               = "#282828";
+static char sel_fg[]                = "#ebdbb2";
+static char sel_bg[]                = "#458588";
+static char out_fg[]                = "#282828";
+static char out_bg[]                = "#282828";
+static char hlsel_fg[]              = "#b8bb26";
+static char hlsel_bg[]              = "#458588";
+static char hlnorm_fg[]             = "#b8bb26";
+static char hlnorm_bg[]             = "#282828";
+static char *colors[SchemeLast][2]  = {
+	/*                                  fg          bg       */
+	[SchemeNorm]                    = { norm_fg,    norm_bg   },
+	[SchemeSel]                     = { sel_fg,     sel_bg    },
+	[SchemeOut]                     = { out_fg,     out_bg    },
+	[SchemeSelHighlight]            = { hlsel_fg,   hlsel_bg  },
+	[SchemeNormHighlight]           = { hlnorm_fg,  hlnorm_bg },
 };
 
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[]          = {
 	"monospace:size=10"
+};
+
+/* Xresources */
+ResourcePref resources[]            = {
+	{ "color15",    STRING,     &norm_fg   },
+	{ "color0",     STRING,     &norm_bg   },
+	{ "color0",     STRING,     &sel_fg    },
+	{ "color2",     STRING,     &sel_bg    },
+	{ "color6",     STRING,     &hlsel_fg  },
+	{ "color2",     STRING,     &hlsel_bg  },
+	{ "color6",     STRING,     &hlnorm_fg },
+	{ "color0",     STRING,     &hlnorm_bg },
 };
 
 /* -b option; if 0, dmenu appears at bottom */
