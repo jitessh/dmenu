@@ -29,12 +29,16 @@ static int min_width                = 500;
 /* -F option; if 0, dmenu doesn't use fuzzy matching */
 static int fuzzy                    = 1;
 
-/* -p option; prompt to the left of input field */
-static const char *prompt           = NULL;
+/* -h option; minimum height of a menu line */
+static unsigned int lineheight      = 25;
+static unsigned int min_lineheight  = 10;
 
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
 static unsigned int lines           = 0;
 static unsigned int columns         = 0;
+
+/* -p option; prompt to the left of input field */
+static const char *prompt           = NULL;
 
 /*
  * Characters not considered part of a word while deleting words
