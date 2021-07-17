@@ -19,6 +19,11 @@ static int topbar                   = 1;
 /* -bw option; size of the window border */
 static unsigned int border_width    = 0;
 
+/* -c option; centers dmenu on screen */
+static int centered = 0;
+/* minimum width when centered */
+static int min_width = 500;
+
 /* -p option; prompt to the left of input field */
 static const char *prompt           = NULL;
 
