@@ -2,10 +2,12 @@
 /* Default settings; can be overriden by command line. */
 
 static const char *colors[SchemeLast][2] = {
-	/*     fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#222222" },
-	[SchemeSel] = { "#eeeeee", "#005577" },
-	[SchemeOut] = { "#000000", "#00ffff" },
+	/*                          fg         bg       */
+	[SchemeNorm]            = { "#bbbbbb", "#222222" },
+	[SchemeSel]             = { "#eeeeee", "#005577" },
+	[SchemeOut]             = { "#000000", "#00ffff" },
+	[SchemeSelHighlight]    = { "#ffc978", "#005577" },
+	[SchemeNormHighlight]   = { "#ffc978", "#222222" },
 };
 
 /* -fn option overrides fonts[0]; default X11 font or font set */
