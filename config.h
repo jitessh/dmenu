@@ -9,7 +9,7 @@ static const char *colors[SchemeLast][2] = {
 };
 
 /* -fn option overrides fonts[0]; default X11 font or font set */
-static const char *fonts[] = {
+static const char *fonts[]          = {
 	"monospace:size=10"
 };
 
@@ -20,9 +20,12 @@ static int topbar                   = 1;
 static unsigned int border_width    = 0;
 
 /* -c option; centers dmenu on screen */
-static int centered = 0;
+static int centered                 = 0;
 /* minimum width when centered */
-static int min_width = 500;
+static int min_width                = 500;
+
+/* -F option; if 0, dmenu doesn't use fuzzy matching */
+static int fuzzy                    = 1;
 
 /* -p option; prompt to the left of input field */
 static const char *prompt           = NULL;
@@ -34,4 +37,4 @@ static unsigned int lines           = 0;
  * Characters not considered part of a word while deleting words
  * for example: " /?\"&[]"
  */
-static const char worddelimiters[] = " ";
+static const char worddelimiters[]  = " ";
