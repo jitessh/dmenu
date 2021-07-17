@@ -32,8 +32,9 @@ static int fuzzy                    = 1;
 /* -p option; prompt to the left of input field */
 static const char *prompt           = NULL;
 
-/* -l option; if nonzero, dmenu uses vertical list with given number of lines */
+/* -l and -g options; controls number of lines and columns in grid if > 0 */
 static unsigned int lines           = 0;
+static unsigned int columns         = 0;
 
 /*
  * Characters not considered part of a word while deleting words
