@@ -2,16 +2,16 @@
 /* Default settings; can be overriden by command line. */
 
 /* colorscheme */
-static char norm_fg[]               = "#ebdbb2";
-static char norm_bg[]               = "#282828";
-static char sel_fg[]                = "#ebdbb2";
-static char sel_bg[]                = "#458588";
-static char out_fg[]                = "#282828";
-static char out_bg[]                = "#282828";
-static char hlsel_fg[]              = "#b8bb26";
-static char hlsel_bg[]              = "#458588";
-static char hlnorm_fg[]             = "#b8bb26";
-static char hlnorm_bg[]             = "#282828";
+static char norm_fg[]               = "#FFFFFF";
+static char norm_bg[]               = "#1A2026";
+static char sel_fg[]                = "#FFFFFF";
+static char sel_bg[]                = "#4CB9D6";
+static char out_fg[]                = "#FFFFFF";
+static char out_bg[]                = "#4CB9D6";
+static char hlsel_fg[]              = "#FB6396";
+static char hlsel_bg[]              = "#4CB9D6";
+static char hlnorm_fg[]             = "#FB6396";
+static char hlnorm_bg[]             = "#1A2026";
 static char *colors[SchemeLast][2]  = {
 	/*                                  fg          bg       */
 	[SchemeNorm]                    = { norm_fg,    norm_bg   },
@@ -28,13 +28,15 @@ static const char *fonts[]          = {
 
 /* Xresources */
 ResourcePref resources[]            = {
-	{ "color15",    STRING,     &norm_fg   },
+	{ "color7",     STRING,     &norm_fg   },
 	{ "color0",     STRING,     &norm_bg   },
-	{ "color0",     STRING,     &sel_fg    },
-	{ "color2",     STRING,     &sel_bg    },
-	{ "color6",     STRING,     &hlsel_fg  },
-	{ "color2",     STRING,     &hlsel_bg  },
-	{ "color6",     STRING,     &hlnorm_fg },
+	{ "color7",     STRING,     &sel_fg    },
+	{ "color4",     STRING,     &sel_bg    },
+	{ "color7",     STRING,     &out_fg    },
+	{ "color4",     STRING,     &out_bg    },
+	{ "color1",     STRING,     &hlsel_fg  },
+	{ "color4",     STRING,     &hlsel_bg  },
+	{ "color1",     STRING,     &hlnorm_fg },
 	{ "color0",     STRING,     &hlnorm_bg },
 };
 
