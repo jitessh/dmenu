@@ -1,4 +1,4 @@
-# Jitesh's dmenu
+# dmenu
 [dmenu](https://tools.suckless.org/dmenu/) is an efficient dynamic menu for X. This build adds extra functionalities to [suckless's](https://suckless.org/) excellent tool.
 
 
@@ -6,7 +6,7 @@
 ## Installation
 - Clone the repository and run `make`:
 ```bash
-git clone https://github.com/voidstarsh/dmenu
+git clone https://github.com/pixxel8/dmenu
 cd dmenu
 sudo make clean install
 ```
